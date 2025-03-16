@@ -6,4 +6,4 @@ key_vault_name_dev  = "dev-apollo-keyvault-07"
 key_vault_name_staging = "stage-apollo-keyvault-07"
 
 #gitlab_token        = "glpat-xxxxxxxxxxxxxxxxx"
-#github_token        = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#github_token        = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
