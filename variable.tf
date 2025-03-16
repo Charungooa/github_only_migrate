@@ -19,11 +19,24 @@ variable "azure_resource_group" {
   default     = "Backend-rg"
 }
 
-variable "key_vault_name" {
+variable "key_vault_name_prod" {
   description = "Name of existing Azure Key Vault"
   type        = string
   default     = "gitlabmigvault"
 }
+
+variable "key_vault_name_dev" {
+  description = "Name of existing Azure Key Vault"
+  type        = string
+  default     = "gitlabmigvault"
+}
+
+variable "key_vault_name_staging" {
+  description = "Name of existing Azure Key Vault"
+  type        = string
+  default     = "null"
+}
+
 
 variable "azure_location" {
   description = "Azure region for resources"
@@ -67,4 +80,10 @@ variable "AZURE_CLIENT_SECRET" {
 variable "AZURE_SUBSCRIPTION_ID" {
   type        = string
   description = "Azure subscription ID"
+}
+
+variable "storage_account_name" {
+  type = string
+  description = "Azure Storage Account name"
+  default = "backednstg755"
 }
