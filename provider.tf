@@ -20,7 +20,7 @@ terraform {
   
   backend "azurerm" {
     resource_group_name  = "Backend-rg"
-    storage_account_name = "backednstg755"
+    storage_account_name = "backednstg756"
     container_name       = "newbackend-container"
     key                  = "secmigrate.tfstate"
     # key is provided dynamically via -backend-config in the workflow
