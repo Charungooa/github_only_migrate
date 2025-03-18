@@ -7,17 +7,17 @@
 # Key Vault Data Sources (3 Vaults for Different Environments)
 data "azurerm_key_vault" "prod_vault" {
   name                = var.key_vault_name_prod
-  resource_group_name = var.azure_resource_group
+  resource_group_name = var.azure_resource_group_prod
 }
 
 data "azurerm_key_vault" "stage_vault" {
   name                = var.key_vault_name_staging
-  resource_group_name = var.azure_resource_group
+  resource_group_name = var.azure_resource_group_staging
 }
 
 data "azurerm_key_vault" "dev_vault" {
   name                = var.key_vault_name_dev
-  resource_group_name = var.azure_resource_group
+  resource_group_name = var.azure_resource_group_dev
 }
 
 # GitLab Project and Variables Data Sources

@@ -13,30 +13,42 @@ variable "github_repo_name" {
   type        = string
 }
 
-variable "azure_resource_group" {
-  description = "Name of existing Azure resource group containing the Key Vault"
+# Resource group variables for each environment
+variable "azure_resource_group_prod" {
+  description = "Name of Azure resource group containing the production Key Vault"
+  type        = string
+  default     = "Backend-rg"
+}
+
+variable "azure_resource_group_staging" {
+  description = "Name of Azure resource group containing the staging Key Vault"
+  type        = string
+  default     = "Backend-rg"
+}
+
+variable "azure_resource_group_dev" {
+  description = "Name of Azure resource group containing the development Key Vault"
   type        = string
   default     = "Backend-rg"
 }
 
 variable "key_vault_name_prod" {
-  description = "Name of existing Azure Key Vault"
+  description = "Name of existing Azure Key Vault for production"
   type        = string
   default     = "gitlabmigvault"
 }
 
 variable "key_vault_name_dev" {
-  description = "Name of existing Azure Key Vault"
+  description = "Name of existing Azure Key Vault for development"
   type        = string
   default     = "gitlabmigvault"
 }
 
 variable "key_vault_name_staging" {
-  description = "Name of existing Azure Key Vault"
+  description = "Name of existing Azure Key Vault for staging"
   type        = string
   default     = "null"
 }
-
 
 variable "azure_location" {
   description = "Azure region for resources"
@@ -83,7 +95,7 @@ variable "AZURE_SUBSCRIPTION_ID" {
 }
 
 variable "storage_account_name" {
-  type = string
+  type        = string
   description = "Azure Storage Account name"
-  default = "backednstg755"
+  default     = "backednstg755"
 }
