@@ -9,4 +9,4 @@ azure_resource_group_staging = null
 azure_resource_group_dev    = "backend-rg"
 
 #gitlab_token        = "glpat-xxxxxxxxxxxxxxxxx"
-#github_token        = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#github_token        = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
