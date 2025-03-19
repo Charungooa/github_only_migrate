@@ -1,11 +1,11 @@
 gitlab_project_path = "torque4/lintingapp"
 github_owner        = "charungooa"
-github_repo_name    = "github_myapp_financeapp"
-key_vault_name_prod = "prod-apollo-keyvault-05"
+github_repo_name    = "github_myapp_whizlab"
+key_vault_name_prod = null
 key_vault_name_dev  = "dev-apollo-keyvault-05"
-key_vault_name_staging = "stage-apollo-keyvault-05"
-azure_resource_group_prod   = "backend-rg"
-azure_resource_group_staging = "backend-rg"
+key_vault_name_staging = null
+azure_resource_group_prod   = null
+azure_resource_group_staging = null
 azure_resource_group_dev    = "backend-rg"
 
 #gitlab_token        = "glpat-xxxxxxxxxxxxxxxxx"
