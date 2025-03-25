@@ -1,0 +1,89 @@
+# .gitignore for terraform 
+# .gitignore for terraform
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform plan files
+*.tfplan
+
+# Ignore Terraform lock files
+*.terraform.lock.hcl
+
+# Ignore Terraform CLI configuration files
+.terraform/
+terraform.rc
+terraform.tfvars
+
+# Ignore Azure credentials
+azure_credentials
+azure_credential.json
+
+# # Ignore Azure service principal credentials
+# azure_service_principal.json
+
+# # Ignore Azure storage account keys
+# azure_storage_account_key
+
+# # Ignore Azure key vault secrets
+# azure_key_vault_secrets
+
+# # Ignore Azure resource group names
+# azure_resource_group_names
+
+# # Ignore Azure subscription IDs
+# azure_subscription_id
+
+# # Ignore Azure tenant IDs
+# azure_tenant_id
+
+# # Ignore Azure client IDs
+# azure_client_id
+
+# Ignore Azure client secrets
+azure_client_secret# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform plan files
+*.tfplan
+
+# Ignore Terraform lock files
+*.terraform.lock.hcl
+
+# Ignore Terraform CLI configuration files
+.terraform/
+terraform.rc
+
+
+# Ignore Azure credentials
+azure_credentials
+azure_credential.json
+
+# Ignore Azure service principal credentials
+# azure_service_principal.json
+
+# # Ignore Azure storage account keys
+# azure_storage_account_key
+
+# # Ignore Azure key vault secrets
+# azure_key_vault_secrets
+
+# # Ignore Azure resource group names
+# azure_resource_group_names
+
+# # Ignore Azure subscription IDs
+# azure_subscription_id
+
+# # Ignore Azure tenant IDs
+# azure_tenant_id
+
+# # Ignore Azure client IDs
+# azure_client_id
+
+# # Ignore Azure client secrets
+# azure_client_secret
