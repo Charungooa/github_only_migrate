@@ -9,4 +9,4 @@ github_repo_name    = "new_migration01"
 # azure_resource_group_dev    = "backend-rg"
 
 #gitlab_token        = "glpat-xxxxxxxxxxxxxxxxx"
-#github_token        = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#github_token        = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
