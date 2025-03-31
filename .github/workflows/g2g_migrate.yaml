@@ -2,11 +2,11 @@ name: Migrate GitLab Secrets to GitHub
 
 on:
   workflow_dispatch:
-    inputs:
-      gitlab_project_path:
-        description: 'GitLab project path (e.g., group/project)'
-        required: true
-        type: string
+    # inputs:
+    #   gitlab_project_path:
+    #     description: 'GitLab project path (e.g., group/project)'
+    #     required: true
+    #     type: string
 
 jobs:
   migrate_secrets:
