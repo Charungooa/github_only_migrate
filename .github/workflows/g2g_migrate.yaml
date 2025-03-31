@@ -15,6 +15,7 @@ jobs:
   migrate_secrets:
     runs-on: ubuntu-latest
     env:
+      STATE_FILE: "${{ github.event.repository.name }}.tfstate"
       TF_VAR_github_token: ${{ secrets.GH_PAT }}
       TF_VAR_gitlab_token: ${{ secrets.GL_PAT }}
       TF_VAR_github_owner: ${{ github.repository_owner }}
@@ -33,13 +34,13 @@ jobs:
         run: terraform init
 
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform plan -state=$STATE_FILE
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: terraform apply -state=$STATE_FILE -auto-approve
 
       - name: Upload Terraform State
         uses: actions/upload-artifact@v4
         with:
-            name: terraform-state
-            path: terraform.tfstate
+            name: terraform-state-${{ github.event.repository.name }}
+            path: ${{ env.STATE_FILE }}
