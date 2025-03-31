@@ -1,6 +1,9 @@
 name: Migrate GitLab Secrets to GitHub
 
 on:
+  push:
+    paths:
+        - 'terraform.tfvars'
   workflow_dispatch:
     # inputs:
     #   gitlab_project_path:
