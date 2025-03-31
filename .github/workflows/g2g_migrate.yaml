@@ -1,0 +1,36 @@
+name: Migrate GitLab Secrets to GitHub
+
+on:
+  workflow_dispatch:
+    inputs:
+      gitlab_project_path:
+        description: 'GitLab project path (e.g., group/project)'
+        required: true
+        type: string
+
+jobs:
+  migrate_secrets:
+    runs-on: ubuntu-latest
+    env:
+      TF_VAR_github_token: ${{ secrets.GH_PAT }}
+      TF_VAR_gitlab_token: ${{ secrets.GL_PAT }}
+      TF_VAR_github_owner: ${{ github.repository_owner }}
+      TF_VAR_github_repo_name: ${{ github.event.repository.name }}
+      TF_VAR_gitlab_project_path: ${{ inputs.gitlab_project_path }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.5.0
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Plan
+        run: terraform plan
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
