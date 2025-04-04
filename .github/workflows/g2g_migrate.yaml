@@ -44,3 +44,14 @@ jobs:
         with:
             name: terraform-state-${{ github.event.repository.name }}
             path: ${{ env.STATE_FILE }}
+      
+      - name: Upload Terraform State to Azure Blob Storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob upload \
+              --account-name due2olympusrgsa \
+              --account-key ${{ secrets.TERRAFORM_BACKEND_KEY }} \
+              --container-name terraform-state-files \
+              --file terraform/${{ env.STATE_FILE }} \
+              --name ${{ env.STATE_FILE }}
